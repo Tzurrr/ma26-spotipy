@@ -9,6 +9,11 @@ class artist:
 
         temp_album = copy.deepcopy(overalldata)
         temp_album.get("track").pop("artists")
-        self.albums.append(Album(temp_album))
+
+        if Album(temp_album) in self.albums:
+            pass
+        else:
+            self.albums.append(Album(temp_album))
+
     def get_albums(self):
         return self.albums
