@@ -14,10 +14,5 @@ def read(some_key_to_filter_on=None):
         f = os.path.join(path, file)
         with open(f, "r") as song:
             temp_songs_dict = json.load(song)
-            count = 0
-            for artist_data in temp_songs_dict.get('track').get("artists"):
-                #yield artist(artist_data, temp_songs_dict)
-                #yield
-                #yield artist(copy.deepcopy(temp_songs_dict), count)
-                yield artist(copy.deepcopy(temp_songs_dict), count)
-                count += 1
+            yield temp_songs_dict
+            
