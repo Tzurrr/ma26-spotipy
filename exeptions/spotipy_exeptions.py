@@ -3,3 +3,9 @@ class CantInsertTwoTracksIntoOneExeption(Exception):
 
 class AlbumAlreadyExists(Exception):
     pass
+
+class PlaylistAlreadyExists(Exception):
+    pass
+
+class PlayListBoundReached(Exception):
+    pass
