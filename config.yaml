@@ -1,2 +1,5 @@
 SONG_DIRECTORY_PATH:
-  PATH: 'D:\\Code\\Spotipy\\songs'
+  DPATH: 'D:\\Code\\Spotipy\\songs'
+
+LOGGING_PATH:
+  LPATH: 'D:\Code\Spotipy'
