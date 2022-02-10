@@ -15,4 +15,3 @@ def read(some_key_to_filter_on=None):
         with open(f, "r") as song:
             temp_songs_dict = json.load(song)
             yield temp_songs_dict
-            
