@@ -3,10 +3,12 @@ import Parser.parser
 from exeptions.spotipy_exeptions import *
 from read.reader import read
 
+
 class playlist:
     playlists = []
     a = read()
-    def __init__(self, user_type ="r"):
+
+    def __init__(self, user_type="r"):
         if user_type == "r":
             if len(self.playlists) >= 5:
                 raise PlayListBoundReached("a non-premium user can only have 5 playlists")
@@ -34,19 +36,19 @@ class playlist:
         count = 0
         while True:
             try:
-                count +=1
+                count += 1
                 temp = next(self.a)
                 if temp.get('track').get("name") in songs:
                     playlist[f"song number {count}"] = temp.get('track').get("name")
                     songs.remove(temp.get('track').get("name"))
-                    count +=1
-                if count ==3:
+                    count += 1
+                if count == 3:
                     raise StopIteration
             except StopIteration:
                 print(f"didnt find those songs: {songs}")
                 return playlist
 
-a = playlist
-a()
-print(a.playlists)
-
+# a = playlist
+# a()
+# print(a.playlists)
+#
