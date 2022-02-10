@@ -1,6 +1,4 @@
-import uuid
 import music.track
-from exeptions.spotipy_exeptions import *
 import copy
 
 class Album:
